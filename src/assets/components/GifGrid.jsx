@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
+import { GifItem } from "./GifItem";
 import { getGif } from "../helpers/getGifs";
 
 
@@ -18,7 +19,12 @@ export const GifGrid = ({ category}) => {
     return (
         <>
             <h3>{category}</h3>
-            <p>Hi world</p>
+
+            <div className="card-grid">
+                {images.map((image)=>(
+                    <GifItem key={image.id} {...image}/>
+                ))}
+            </div>
         </>
     )
 }
