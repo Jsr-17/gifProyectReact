@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { AddCategory } from "./assets/components/AddCategory";
-import { GifGrid } from "./assets/components/gifGrid";
+import { AddCategory,GifGrid } from "./assets/components";
 
 export const App = () => {
   const [categories, setCategories] = useState(['Naruto']);
